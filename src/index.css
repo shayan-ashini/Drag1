@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: #603F83FF;
+  }
+  
+  .draggables {
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+    background-color: #C7D3D4FF;
+
+  
+    
+    /* background-color: yellow; */
+  }
+  
+  .draggable {
+    width: 80px;
+    height: 80px;
+    /* background-color: lightblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+    margin: 0 10px;
+    background-color:#603F83FF;
+    color: white;
+    border: 2px solid white;
+  }
+  
+  .droppable {
+    
+    height: 500px;
+    background-color: #C7D3D4FF;
+    position: relative;
+    border: 2px dashed black;
+    border-radius: 5px;
+    overflow-x: scroll;
+    
+  }
+  
+  .dropped-item {
+    width: 80px;
+    height: 80px;
+    background-color: #603F83FF;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .dropped-item div {
+    flex-grow: 1;
+    margin-right: 5px;
+    cursor: pointer;
+    /* background-color: blue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  .dropped-item button {
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #C7D3D4FF;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .sidebar>*{
+    margin-top: 20px;
+  }
+  
+  .sidebar textarea {
+    width: 100%;
+    height: 60px;
+    padding-left: 20px;
+    padding-top: 10px;
+    border: 2px solid black;
+    
+  }
+  
